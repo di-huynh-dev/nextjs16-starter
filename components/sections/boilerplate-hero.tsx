@@ -168,6 +168,32 @@ export function BoilerplateHero() {
           </div>
         </motion.div>
 
+        {/* Install Command - scrollable on mobile */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="mb-6 md:mb-8 overflow-x-auto"
+        >
+          <div className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 py-3 md:py-4 rounded-xl bg-[#1C1C1E]/90 backdrop-blur-md border border-white/10 shadow-xl font-mono text-xs sm:text-sm md:text-base whitespace-nowrap">
+            <span className="text-muted-foreground">$</span>
+            <span className="text-white">
+              bun create nextdi-bun-app my-project
+            </span>
+            <button
+              onClick={copyToClipboard}
+              className="p-1.5 md:p-2 rounded-lg hover:bg-white/10 transition-colors text-white/60 hover:text-white flex-shrink-0"
+              aria-label="Copy command"
+            >
+              {copied ? (
+                <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-green-400" />
+              ) : (
+                <Copy className="w-3.5 h-3.5 md:w-4 md:h-4" />
+              )}
+            </button>
+          </div>
+        </motion.div>
+
         {/* CTA Buttons - stack on mobile */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

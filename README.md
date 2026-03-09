@@ -11,14 +11,14 @@
 
 A production-ready, feature-packed Next.js boilerplate with stunning glassmorphism design, built-in blog system with Text-to-Speech, and everything you need to launch your next web app.
 
-[Live Demo](https://nextjs-bun-starter.vercel.app)
+[Live Demo](https://nextjs16-starter.vercel.app/p)
 
 ## <img src="./public/techstack.png" alt="Tech Stack - Next.js, Bun, TypeScript, Tailwind CSS, Shadcn/ui" width="400">
 
 ## Homepage Preview
 
 <div align="center">
-  <img src="./public/techstack.png" alt="Homepage Demo" width="800">
+  <img src="./public/homepage.png" alt="Homepage Demo" width="800">
 </div>
 
 ---
@@ -125,22 +125,33 @@ npx tsx file.ts   → bun file.ts    # TypeScript runs directly!
 
 ---
 
-### Manual Installation
+### Quick Start Installation
+
+You can generate a new project using our CLI tool. It will automatically download the boilerplate, set up your project name, and install dependencies.
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/di-huynh-dev/nextjs-bun-starter.git my-project
+# Using Bun (Recommended)
+bun create nextdi-bun-app my-project
+
+# Using npm
+npm create nextdi-bun-app my-project
+
+# Using pnpm
+pnpm create nextdi-bun-app my-project
+
+# Using yarn
+yarn create nextdi-bun-app my-project
+```
+
+Once installed, navigate to the folder and get started:
+
+```bash
 cd my-project
 
-# 2. Install dependencies (~1.5 seconds with Bun!)
-bun install
-
-# 3. Set up environment variables
+# Set up environment variables
 cp .env.example .env.local
 
-# 4. Configure Google OAuth (see below)
-
-# 5. Start development
+# Start development server
 bun run dev
 ```
 
@@ -370,5 +381,3 @@ Works on any platform that supports Node.js:
 |         | Floating glass navbar                        |
 |         | Scroll-to-top button                         |
 |         | Theme toggle with dark/light mode            |
-# nextjs16-starter
-# nextjs16-starter
