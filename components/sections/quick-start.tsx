@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import { Copy, Check, Terminal, Key, Rocket, ExternalLink } from 'lucide-react';
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { Copy, Check, Terminal, Key, Rocket, ExternalLink } from "lucide-react";
 
 interface CodeBlockProps {
   code: string;
   language?: string;
 }
 
-function CodeBlock({ code, language = 'bash' }: CodeBlockProps) {
+function CodeBlock({ code, language = "bash" }: CodeBlockProps) {
   const [copied, setCopied] = useState(false);
 
   const copyToClipboard = () => {
@@ -21,7 +21,9 @@ function CodeBlock({ code, language = 'bash' }: CodeBlockProps) {
   return (
     <div className="relative group">
       <pre className="bg-[#1C1C1E]/90 backdrop-blur-md border border-white/10 rounded-xl p-4 overflow-x-auto shadow-xl">
-        <code className={`text-sm font-mono text-white/90 language-${language}`}>
+        <code
+          className={`text-sm font-mono text-white/90 language-${language}`}
+        >
           {code}
         </code>
       </pre>
@@ -44,13 +46,14 @@ const steps = [
   {
     number: 1,
     icon: Terminal,
-    title: 'Create Your Project',
-    description: 'Run the create command to scaffold a new project. This works with Bun, npm, pnpm, or Yarn.',
+    title: "Create Your Project",
+    description:
+      "Run the create command to scaffold a new project. This works with Bun, npm, pnpm, or Yarn.",
     code: `# With Bun (Recommended - 30x faster)
-bun create di-huynh-app my-project
+bun create nextdi-bun-app my-project
 
 # Or with npm
-npm create di-huynh-app my-project
+npm create nextdi-bun-app my-project
 
 # Or clone directly
 git clone https://github.com/di-huynh-dev/nextjs-bun-starter.git my-project`,
@@ -58,8 +61,9 @@ git clone https://github.com/di-huynh-dev/nextjs-bun-starter.git my-project`,
   {
     number: 2,
     icon: Key,
-    title: 'Configure Authentication',
-    description: 'Set up Google OAuth by adding your credentials to the environment file.',
+    title: "Configure Authentication",
+    description:
+      "Set up Google OAuth by adding your credentials to the environment file.",
     code: `# Copy the example env file
 cp .env.example .env.local
 
@@ -72,8 +76,9 @@ NEXTAUTH_URL=http://localhost:3000`,
   {
     number: 3,
     icon: Rocket,
-    title: 'Start Building',
-    description: 'Install dependencies and start the development server. You\'re ready to customize!',
+    title: "Start Building",
+    description:
+      "Install dependencies and start the development server. You're ready to customize!",
     code: `# Install dependencies (takes ~1.5 seconds with Bun!)
 bun install
 
@@ -86,13 +91,16 @@ bun run dev
 
 export function QuickStartSection() {
   return (
-    <section id="quick-start" className="py-24 px-6 bg-[#F2F2F7] dark:bg-[#2C2C2E]">
+    <section
+      id="quick-start"
+      className="py-24 px-6 bg-[#F2F2F7] dark:bg-[#2C2C2E]"
+    >
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
+          viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -100,8 +108,8 @@ export function QuickStartSection() {
             Quick Start
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Get your project up and running in under 2 minutes.
-            Follow these three simple steps.
+            Get your project up and running in under 2 minutes. Follow these
+            three simple steps.
           </p>
         </motion.div>
 

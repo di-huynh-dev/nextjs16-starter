@@ -17,7 +17,7 @@ export function BoilerplateHero() {
   const [copied, setCopied] = useState(false);
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText("bun create di-huynh-app my-project");
+    navigator.clipboard.writeText("bun create nextdi-bun-app my-project");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
